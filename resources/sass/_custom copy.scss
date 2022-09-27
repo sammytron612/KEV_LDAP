@@ -1,0 +1,264 @@
+$theme-colors: (
+  "crimson": #900,
+  "blue": #3490dc,
+  'dark-blue':#034972,
+  'coral':#FF7F50,
+  "indigo": #6574cd,
+  "purple": #9561e2,
+  "pink": #f66d9b,
+  "red": #e3342f,
+  "orange": #f6993f,
+  "yellow": #ffed4a,
+  "green": #38c172,
+  "light-green": #6ceea2,
+  "teal":#008080,
+  "light-teal": #4dc0b5,
+  "dark-teal": #004b49,
+  "gray": #8a8888,
+  "light-gray": #dfdfdf,
+  "dark-gray": #5c5b5b,
+  "cyan": #6cb2eb
+);
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
+
+  .navbar-btn {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none !important;
+    border: none; }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0; }
+
+  .wrapper {
+    width: 100%; }
+
+  #sidebar {
+    min-width: 270px;
+    max-width: 270px;
+    background: rgba(36, 29, 143, 0.993);
+    //background: rgb(2,0,36);
+    //background: linear-gradient(90deg, rgb(30, 25, 122) 0%, rgb(35, 35, 114) 35%, rgb(86, 86, 206));
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    #sidebar.active {
+      min-width: 80px;
+      max-width: 80px;
+      text-align: center; }
+      #sidebar.active ul.components li {
+        font-size: 14px; }
+        #sidebar.active ul.components li a {
+          padding: 10px 0; }
+          #sidebar.active ul.components li a span {
+            margin-right: 0;
+            display: block;
+            font-size: 24px; }
+      #sidebar.active .logo {
+        padding: 10px 0; }
+      #sidebar.active .footer {
+        display: none; }
+    #sidebar .logo {
+      display: block;
+      color: #fff;
+      font-weight: 900;
+      padding: 10px 30px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      @media (prefers-reduced-motion: reduce) {
+        #sidebar .logo {
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none; } }
+    #sidebar ul.components {
+      padding: 0;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      @media (prefers-reduced-motion: reduce) {
+        #sidebar ul.components {
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none; } }
+    #sidebar ul li {
+      font-size: 16px; }
+      #sidebar ul li > ul {
+        margin-left: 10px; }
+        #sidebar ul li > ul li {
+          font-size: 14px; }
+      #sidebar ul li a {
+        padding: 10px 30px;
+        display: block;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        #sidebar ul li a span {
+          margin-right: 15px; }
+          @media (max-width: 991.98px) {
+            #sidebar ul li a span {
+              display: block; } }
+        #sidebar ul li a:hover {
+          color: #fff; }
+      #sidebar ul li.active > a {
+        background: transparent;
+        color: #fff; }
+    @media (max-width: 991.98px) {
+      #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important; }
+        #sidebar.active {
+          margin-left: 0 !important; } }
+
+  a[data-toggle="collapse"] {
+    position: relative; }
+
+  .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+  @media (max-width: 991.98px) {
+    #sidebarCollapse span {
+      display: none; } }
+
+  .footer {
+    padding: 0 30px; }
+    @media (max-width: 991.98px) {
+      .footer {
+        display: none; } }
+
+  #content {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+  .btn.btn-primary {
+    background: #3e64ff;
+    border-color: #3e64ff; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus {
+      background: #3e64ff !important;
+      border-color: #3e64ff !important; }
+
+
+[x-cloak] {
+    display: none;
+  }
+
+  .bg-gradient {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+
+  .progress {
+    position: relative;
+	height: 30px;
+}
+.progress > .progress-type {
+	position: absolute;
+	left: 0px;
+	font-weight: 800;
+	padding: 3px 30px 2px 10px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+	position: absolute;
+	right: 0px;
+	font-weight: 800;
+	padding: 3px 10px 2px;
+}
+
+
+.back {
+
+    background-image: url('/images/teams.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    background-size: cover;
+
+}
+
+.rounded-corners {
+    -moz-border-radius: 25x;
+    -webkit-border-radius: 25px;
+    border-radius: 25px; /* future proofing */
+    -khtml-border-radius: 25px; /* for old Konqueror browsers */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
+
+/*----  Main Style  ----*/
+
+  .card2:hover {
+
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        transition: box-shadow 500ms;
+        opacity:0.8;
+
+        -moz-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        -o-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+
+        -webkit-transition: transform 0.3s ease-out;
+        -moz-transition:transform 0.3s ease-out;
+        -ms-transition:transform 0.3s ease-out;
+  }
+
+  /* Fade in the pseudo-element with the bigger shadow */
+  .card2:hover::after {
+
+    opacity: 1;
+  }
+
+.bg-light-success
+{
+    background-color: #80ff80;
+}
+
+

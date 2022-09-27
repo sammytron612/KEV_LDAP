@@ -1,0 +1,106 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default * Connection Name
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify which of the * connections below you wish
+    | to use as your default connection for all * operations. Of
+    | course you may add as many connections you'd like below.
+    |
+    */
+
+    'default' => env('*_CONNECTION', 'hydra','overwatch','cyberton','azmodeus'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | * Connections
+    |--------------------------------------------------------------------------
+    |
+    | Below you may configure each * connection your application requires
+    | access to. Be sure to include a valid base DN - otherwise you may
+    | not receive any results when performing * search operations.
+    |
+    */
+
+    'connections' => [
+
+        'hydra' => [
+            'hosts' => [env('HYDRA_*_HOST', '127.0.0.1')],
+            'username' => env('HYDRA_*_USERNAME', 'cn=user,dc=local,dc=com'),
+            'password' => env('HYDRA_*_PASSWORD', 'secret'),
+            'port' => env('HYDRA_*_PORT', 389),
+            'base_dn' => env('HYDRA_*_BASE_DN', 'dc=local,dc=com'),
+            'timeout' => env('HYDRA_*_TIMEOUT', 5),
+            'use_ssl' => env('HYDRA_*_SSL', false),
+            'use_tls' => env('HYDRA_*_TLS', false),
+        ],
+
+        'overwatch' => [
+            'hosts' => [env('OVERWATCH_*_HOST', '127.0.0.1')],
+            'username' => env('OVERWATCH_*_USERNAME', 'cn=user,dc=local,dc=com'),
+            'password' => env('OVERWATCH_*_PASSWORD', 'secret'),
+            'port' => env('OVERWATCH_*_PORT', 389),
+            'base_dn' => env('OVERWATCH_*_BASE_DN', 'dc=local,dc=com'),
+            'timeout' => env('OVERWATCH_*_TIMEOUT', 5),
+            'use_ssl' => env('OVERWATCH_*_SSL', false),
+            'use_tls' => env('OVERWATCH_*_TLS', false),
+        ],
+
+        'cybertron' => [
+            'hosts' => [env('CYBERTRON_*_HOST', '127.0.0.1')],
+            'username' => env('CYBERTRON_*_USERNAME', 'cn=user,dc=local,dc=com'),
+            'password' => env('CYBERTRON_*_PASSWORD', 'secret'),
+            'port' => env('CYBERTRON_*_PORT', 389),
+            'base_dn' => env('CYBERTRON_*_BASE_DN', 'dc=local,dc=com'),
+            'timeout' => env('CYBERTRON_*_TIMEOUT', 5),
+            'use_ssl' => env('CYBERTRON_*_SSL', false),
+            'use_tls' => env('CYBERTRON_*_TLS', false),
+        ],
+
+        'azmodeus' => [
+            'hosts' => [env('AZMODEUS_*_HOST', '127.0.0.1')],
+            'username' => env('AZMODEUS_*_USERNAME', 'cn=user,dc=local,dc=com'),
+            'password' => env('AZMODEUS_*_PASSWORD', 'secret'),
+            'port' => env('AZMODEUS_*_PORT', 389),
+            'base_dn' => env('AZMODEUS_*_BASE_DN', 'dc=local,dc=com'),
+            'timeout' => env('AZMODEUS_*_TIMEOUT', 5),
+            'use_ssl' => env('AZMODEUS_*_SSL', false),
+            'use_tls' => env('AZMODEUS_*_TLS', false),
+        ],
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | * Logging
+    |--------------------------------------------------------------------------
+    |
+    | When * logging is enabled, all * search and authentication
+    | operations are logged using the default application logging
+    | driver. This can assist in debugging issues and more.
+    |
+    */
+
+    'logging' => env('*_LOGGING', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | * Cache
+    |--------------------------------------------------------------------------
+    |
+    | * caching enables the ability of caching search results using the
+    | query builder. This is great for running expensive operations that
+    | may take many seconds to complete, such as a pagination request.
+    |
+    */
+
+    'cache' => [
+        'enabled' => env('*_CACHE', false),
+        'driver' => env('CACHE_DRIVER', 'file'),
+    ],
+
+];
